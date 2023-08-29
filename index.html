@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type='image/png' href="/favicon.png" sizes='32x32' />
-    <link rel="icon" type='image/png' href="/favicon16.png" sizes='16x16' />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSON to Vue Examples</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-review</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+    <div id="car" class="container">
+        
+
+        <nav class="navbar navbar-expand-lg text-bg-info p-3 container">
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="#">Collection</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link disabled">Disabled</a>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <h1 class="text-info container"> {{title}}</h1>
+        <hr>
+    
+        <div class="rightCol ">
+            <p class="cartBox">Cart({{cart.length}})</p>
+
+        </div>
+        
+
+        <hello-me :premium="premium" :pdetails="pdetails" @qaz="updateCart"></hello-me>
+        
+       
+
+
+       
+
+    </div>
+
+    <script src="main.js"></script>
+    <script src="components/productDisplay.js"></script>
+    <script src="components/reviewForm.js"></script>
+    <script src="components/reviewList.js"></script>
+    <script src="components/gallory.js"></script>
+    <script>
+        const mountedApp = carApp.mount("#car")
+    </script>
+    <script type="module" src="/vue-review-01/me.json"></script>
+
+</body>
+
 </html>
